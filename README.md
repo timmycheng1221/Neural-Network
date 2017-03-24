@@ -6,7 +6,7 @@
 - 按下右上角的「Open File」→匯入資料集→「Input」方框顯示資料集
   ![GUI](https://raw.githubusercontent.com/timmycheng1221/Perception-Machine/master/image/2.jpg)
 - 輸入學習率、訓練準確率和迭代次數，並按下右下角的「Train」 
-  ![GUI](https://raw.githubusercontent.com/timmycheng1221/Perception-Machine/master/image/3.jpg)
+  ![GUI](https://raw.githubusercontent.com/timmycheng1221/Perception-Machine/master/image/3.jpg)  
 →顯示訓練結果(圖形、左下角的「Training Accuracy」顯示訓練準確率、「Weight Vector」顯示訓練後的鍵結值、「Output」方框顯示訓練過程中鍵結值的變化)
  
  
@@ -14,7 +14,7 @@
   ![GUI](https://raw.githubusercontent.com/timmycheng1221/Perception-Machine/master/image/4.jpg)
 ## 程式簡介：
 - Main.java：  
-建立主要的GUI介面，先將讀入的資料夾依照期望值做排序分成兩類，並將期望值正規化成(-1, 1)方便感知機做處理，若資料集的數量少於10筆，則不會將資料集分成訓練和測試兩種，全部資料集將都會進行訓練。感知機訓練前先隨機初始化鍵結值(w[0], w[1], w[2])，範圍為[0, 1]，閥值為-1，在迭代次數內或未達到訓練準確率時，用資料集和鍵結值計算出一個值，若這個值 > 0(or < 0)，但期望值 < 0(or > 0)，則調整鍵結值，反之，鍵結值不變。公式參考PPT的「2.3 感知機收斂定理(1)」 
+建立主要的GUI介面，先將讀入的資料夾依照期望值做排序分成兩類，並將期望值正規化成(-1, 1)方便感知機做處理，若資料集的數量少於10筆，則不會將資料集分成訓練和測試兩種，全部資料集將都會進行訓練。感知機訓練前先隨機初始化鍵結值(w[0], w[1], w[2])，範圍為[0, 1]，閥值為-1，在迭代次數內或未達到訓練準確率時，用資料集和鍵結值計算出一個值，若這個值 > 0(or < 0)，但期望值 < 0(or > 0)，則調整鍵結值，反之，鍵結值不變。   
 訓練完成後將資料集和鍵結值傳到Plot.java進行繪圖工作
 - Plot.java：  
 繪製資料集(訓練+測試)的點和感知機訓練後的線  
